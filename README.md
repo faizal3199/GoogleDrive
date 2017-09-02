@@ -1,4 +1,4 @@
-GoogleDrive
+Google Drive for ubuntu
 ====
 <br>
 Easily synchronize local folder with Google Drive
@@ -11,7 +11,7 @@ Easily synchronize local folder with Google Drive
 1)Python 2.6 or greater.<br>
 2)The pip package management tool.<br>
 3)Access to the internet and a web browser.<br>
-4) Google account with Google Drive enabled.<br>
+4)Google account with Google Drive enabled.<br>
 <br>
 
 
