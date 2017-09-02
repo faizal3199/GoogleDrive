@@ -1,7 +1,7 @@
 Google Drive for ubuntu
 ====
 <br>
-Easily synchronize local folder with Google Drive
+Easily synchronize local folder with Google Drive in ubuntu
 <br>
 <br>
 
