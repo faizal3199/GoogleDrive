@@ -1,0 +1,3 @@
+import simple
+
+simple.main()

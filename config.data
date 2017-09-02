@@ -1,0 +1,4 @@
+name=GoogleDrive
+version=1.0.0
+github_link=https://github.com/faizal3199/GoogleDrive
+description="Synchronize local folder with Google Drive"
