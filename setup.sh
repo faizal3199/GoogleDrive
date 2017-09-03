@@ -9,7 +9,7 @@ echo "$description"
 echo "GitHub Repo: ""$github_link"
 
 #sudo update&&sudo apt-get -y install python-pip
-#sudo update&&pip install --upgrade google-api-python-client
+#sudo update&&sudo pip install --upgrade google-api-python-client
 echo "THIS TOOLS REQUIRES pip AND Python 2.6 or later"
 echo "For more details visit https://developers.google.com/drive/v3/web/quickstart/python"
 
@@ -38,7 +38,7 @@ echo -e "Copying from $SCRIPTPATH/auth.py to ~/.GoogleDrive"
 cp "$SCRIPTPATH"/auth.py ~/.GoogleDrive/auth.py
 
 echo -e "Copying from $SCRIPTPATH/client_secret.json to ~/.GoogleDrive"
-cp "$SCRIPTPATH"/client_secret.json ~/.GoogleDrive/auth.py
+cp "$SCRIPTPATH"/client_secret.json ~/.GoogleDrive/client_secret.json
 
 echo -e "Copying from $SCRIPTPATH/simple.py to ~/.GoogleDrive"
 cp "$SCRIPTPATH"/simple.py ~/.GoogleDrive/simple.py
@@ -59,16 +59,16 @@ echo "Copying completed"
 
 echo -e "\033[1;37mSetting up Cron Job"
 
-crontab -l >~/GoogleDrive/tmp/cronjob
-echo "#GoogleDrive script **don't edit next line**">>~/tmp/cronjob
-echo "*/30 * * * * python /home/$USER/.GoogleDrive/sync.py $USER">>~/tmp/cronjob
+crontab -l >/tmp/cronjob
+echo "#GoogleDrive script **don't edit next line**">>/tmp/cronjob
+echo "*/30 * * * * python /home/$USER/.GoogleDrive/sync.py $USER">>/tmp/cronjob
 
-crontab ~/tmp/cronjob
+crontab /tmp/cronjob
 
 echo -e "Initializing script"
 python ~/.GoogleDrive/setup.py
 
 echo "Setup Complete"
 echo -e "\033[0;31mRemoving temporary files"
-rm ~/tmp/cronjob
+rm /tmp/cronjob
 echo -e "You may delete this files\033[0m"
