@@ -151,12 +151,15 @@ def doFinalAction(finalActions):
 
 def Download(fileId,path):
     #check if file is  folder
-    results = service.files().get(fileId=fileId,fields="mimeType").execute()
+    results = service.files().get(fileId=fileId,fields="mimeType,trashed").execute()
     if results['mimeType']==MIME_FOLDER:
         listing = getList(None,fileId)
         listing = itrerateFolder(listing)
         forFirstTime(listing,getFullPath(fileId)+"/")
         return True
+    if results['trashed']:
+    	print "File is in trash. No need to download"
+    	return True
 
     #If it is a file then download it
     results = service.files().get_media(fileId=fileId) #Get file media 
