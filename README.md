@@ -19,7 +19,7 @@ Easily synchronize local folder with Google Drive in ubuntu
 ---
 </br>
 
-1)Follow the steps given in [LINK](https://developers.google.com/drive/v3/web/quickstart/python) to generate client_secret.json file
+1)Follow the steps given in [link](https://developers.google.com/drive/v3/web/quickstart/python) to generate client_secret.json file
 <br>
 2)Copy client_secret.json to the directory where you have downloaded these scripts<br>
 3)Execute setup.sh<br>
