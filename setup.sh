@@ -61,7 +61,7 @@ echo -e "\033[1;37mSetting up Cron Job"
 
 crontab -l >/tmp/cronjob
 echo "#GoogleDrive script **don't edit next line**">>/tmp/cronjob
-echo "*/30 * * * * python /home/$USER/.GoogleDrive/sync.py $USER">>/tmp/cronjob
+echo "*/30 * * * * python /home/$USER/.GoogleDrive/sync.py">>/tmp/cronjob
 
 crontab /tmp/cronjob
 
